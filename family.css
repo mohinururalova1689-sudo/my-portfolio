@@ -1,0 +1,156 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 25px;
+}
+.site-header {
+  background-color: #ffffff; 
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+.header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 0;
+}
+.logo-link {
+  font-size: 26px;
+  font-weight: 700;
+  color: #2563eb;
+  text-decoration: none;
+  letter-spacing: -0.5px;
+}
+
+.navbar-list {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+.navbar-link {
+  text-decoration: none;
+  color: #64748b;
+  font-weight: 500;
+  font-size: 15px;
+  transition: all 0.3s ease;
+  position: relative;
+  padding: 5px 0;
+}
+
+.navbar-link:hover,
+.navbar-link.active {
+  color: #2563eb;
+}
+.navbar-link::after {
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #2563eb;
+  transition: width 0.3s ease;
+}
+
+.navbar-link:hover::after,
+.navbar-link.active::after {
+  width: 100%;
+}
+
+.family-hero {
+  padding: 80px 0;
+  background-color: #f8fafc;
+}
+.family-title {
+  text-align: center;
+  font-size: 36px;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 50px;
+}
+.family-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.family-item {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+.family-item:hover {
+  transform: scale(1.02);
+  box-shadow: 0 20px 35px rgba(37, 99, 235, 0.15);
+}
+.family-box {
+  flex: 1;
+}
+.family-name {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #2563eb;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+.family-desc {
+  font-size: 16px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #475569;
+  line-height: 1.7;
+}
+.family-img{
+  width: 340px;
+  height: 420px;
+  object-fit: cover;
+  border-radius: 24px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+footer {
+  background-color: #ffffff;
+  border-top: 1px solid #e2e8f0;
+  padding: 30px 0;
+}
+.footer-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.social-box {
+  display: flex;
+  gap: 20px;
+}
+.social-box a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  transition: 0.3s;
+  
+}
+.social-box a:hover {
+  transform: scale(1.5);
+}
+.social-box img {
+  width: 22px;
+  height: 22px;
+}
