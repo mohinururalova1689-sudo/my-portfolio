@@ -83,7 +83,7 @@
   overflow: hidden;
   width: calc(50% - 15px);
   
-  transition: transform 0.3s ease;
+  transition:  0.3s ease;
   transition: box-shadow 0.3s ease;
 }
 
