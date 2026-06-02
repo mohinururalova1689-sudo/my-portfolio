@@ -4,13 +4,16 @@
   box-sizing: border-box;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+html {
+  scroll-behavior: smooth;
+}
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 25px;
 }
 .site-header {
-  background-color: #ffffff; 
+  background-color: #ffffff;
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -321,7 +324,6 @@ footer {
   width: 45px;
   height: 45px;
   transition: 0.3s;
-  
 }
 .social-box a:hover {
   transform: scale(1.5);
