@@ -1,3 +1,4 @@
+/* --- UMUMIY SOZLAMALAR --- */
 * {
   margin: 0;
   padding: 0;
@@ -5,12 +6,17 @@
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+  background: linear-gradient(180deg, #f4f7fe 0%, #eef2ff 50%, #e2e8f0 100%);
+  background-attachment: fixed;
+}
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 25px;
 }
-
 .site-header {
   background-color: #ffffff; 
   position: sticky;
@@ -46,19 +52,20 @@
   font-size: 15px;
   padding: 5px 0;
   border-bottom: 2px solid transparent;
-  
-  transition: color 0.3s ease;
-  transition: border-bottom 0.3s ease;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
 }
 
 .navbar-link:hover,
 .navbar-link.active {
-  color: #2563eb;
+  /* color: #2563eb; */
+   color: #FFf;
+  background-color: #0538af;
+  padding: 8px 10px;
+  border-radius: 10px;
 }
-
 .projects-hero {
   padding: 80px 0;
-  background-color: #f3f7fa; 
+  background: transparent;
 }
 
 .project-title {
@@ -67,6 +74,11 @@
   font-weight: 700;
   color: #0f172a;
   margin-bottom: 50px;
+  transition: 0.3s ease;
+}
+.project-title:hover{
+ color: #0538af;
+ transform: scale(1.1);
 }
 
 .project-list {
@@ -78,13 +90,11 @@
 }
 
 .project-item {
-  background-color: #ffffff;
+  background-color: #ffffff; /* Loyihalar oq kartochka ichida chiroyli kontrast beradi */
   border-radius: 20px;
   overflow: hidden;
   width: calc(50% - 15px);
-  
-  transition:  0.3s ease;
-  transition: box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-item:hover {
@@ -109,6 +119,7 @@
   background-color: #ffffff;
 }
 
+/* --- FOOTER --- */
 footer {
   background-color: #ffffff;
   border-top: 1px solid #e2e8f0;
@@ -132,7 +143,6 @@ footer {
   justify-content: center;
   width: 45px;
   height: 45px;
-  
   transition: transform 0.3s ease;
 }
 
