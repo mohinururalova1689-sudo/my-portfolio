@@ -16,11 +16,9 @@ html {
   margin: 0 auto;
   padding: 0 25px;
 }
-
-/* --- SITE HEADER & NAVBAR --- */
 .site-header {
   background-color: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(10px); /* Orqa fonni xira qilish (Glassmorphism) */
+  backdrop-filter: blur(10px); 
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -52,8 +50,6 @@ html {
   list-style: none;
   gap: 30px;
 }
-
-/* Navbar linklari to'g'rilangan va chiroyli holatga keltirildi */
 .navbar-link {
   text-decoration: none;
   color: #64748b;
@@ -66,10 +62,8 @@ html {
 
 .navbar-link:hover,
 .navbar-link.active {
-  color: #2563eb; /* Orqa fon o'rniga faqat harf rangi o'zgaradi */
+  color: #2563eb;
 }
-
-/* Link tagidan chiquvchi chiziq animatsiyasi */
 .navbar-link::after {
   content: "";
   position: absolute;
@@ -86,8 +80,6 @@ html {
 .navbar-link.active::after {
   width: 100%;
 }
-
-/* --- ABOUT ME SECTION --- */
 .aboutme {
   padding: 100px 0;
   background: transparent;
@@ -128,8 +120,6 @@ html {
   color: #64748b;
   line-height: 1.6;
 }
-
-/* --- BUTTONS --- */
 .btn {
   display: inline-block;
   background: linear-gradient(135deg, #2563eb, #0ea5e9, #0f172a);
@@ -149,11 +139,9 @@ html {
 
 .btn:hover {
   background-position: right center;
-  transform: translateY(-4px); /* Tepaga bir oz ko'tariladi */
+  transform: translateY(-4px); 
   box-shadow: 0 15px 25px rgba(37, 99, 235, 0.4);
 }
-
-/* --- IMAGES WITH HOVER EFFECTS --- */
 .img-box {
   flex: 0.8;
   display: flex;
@@ -175,11 +163,9 @@ html {
 }
 
 .aboutme-img:hover, .more-img:hover {
-  transform: translateY(-10px) scale(1.02); /* Rasm tepaga yumshoq siljiydi */
+  transform: translateY(-10px) scale(1.02); 
   box-shadow: 0 30px 50px rgba(37, 99, 235, 0.25);
 }
-
-/* --- MORE SECTION --- */
 .more {
   padding: 100px 0;
   background: transparent;
@@ -225,7 +211,7 @@ html {
 .data .container {
   display: flex;
   justify-content: space-between;
-  align-items: stretch; /* Form va xarita balandligi teng bo'ladi */
+  align-items: stretch; 
   gap: 50px;
 }
 
@@ -283,7 +269,7 @@ html {
   cursor: pointer;
   box-shadow: 0 8px 16px rgba(37, 99, 235, 0.2);
   transition: all 0.3s ease;
-  width: 100%; /* Tugma to'liq kenglikda chiroyli turadi */
+  width: 100%;
   margin-top: 10px;
 }
 
@@ -296,7 +282,7 @@ html {
 .map {
   flex: 1;
   border-radius: 24px;
-  overflow: hidden; /* Xarita burchaklarini yumaloq saqlash uchun */
+  overflow: hidden; 
   box-shadow: 0 15px 35px rgba(15, 23, 42, 0.5);
 }
 
@@ -345,8 +331,6 @@ footer {
   width: 22px;
   height: 22px;
 }
-
-/* --- RESPONSIVE DESIGN (Mobil moslashuvchanlik) --- */
 @media (max-width: 968px) {
   .aboutme-wrapper, .more-wrapper, .data .container {
     flex-direction: column;
@@ -354,7 +338,7 @@ footer {
     gap: 40px;
   }
   .img-box {
-    order: -1; /* Mobil ekranda rasmlar matndan oldin chiqadi */
+    order: -1; 
   }
   .data-box {
     max-width: 100%;
