@@ -17,8 +17,11 @@ html {
   margin: 0 auto;
   padding: 0 25px;
 }
+
+/* --- SITE HEADER & NAVBAR --- */
 .site-header {
-  background-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px); /* Glassmorphism effekti */
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -38,6 +41,11 @@ html {
   color: #2563eb;
   text-decoration: none;
   letter-spacing: -0.5px;
+  transition: transform 0.3s ease;
+}
+
+.logo-link:hover {
+  transform: scale(1.05);
 }
 
 .navbar-list {
@@ -46,32 +54,32 @@ html {
   gap: 30px;
 }
 
+/* Navbar dizayni butunlay to'g'rilandi */
 .navbar-link {
   text-decoration: none;
   color: #64748b;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 15px;
-  transition: all 0.3s ease;
+  transition: color 0.3s ease;
   position: relative;
-  padding: 5px 0;
+  padding: 8px 4px;
 }
 
 .navbar-link:hover,
 .navbar-link.active {
-  /* color: #2563eb; */
-   color: #FFf;
-  background-color: #0538af;
-  padding: 8px 10px;
-  border-radius: 10px;
+  color: #2563eb; /* Orqa ko'q fon o'rniga faqat harf rangi o'zgaradi */
 }
 
+/* Link tagidan silliq chiquvchi chiziq */
 .navbar-link::after {
+  content: "";
   position: absolute;
   width: 0;
-  height: 2px;
+  height: 3px;
   bottom: 0;
   left: 0;
   background-color: #2563eb;
+  border-radius: 2px;
   transition: width 0.3s ease;
 }
 
@@ -79,82 +87,97 @@ html {
 .navbar-link.active::after {
   width: 100%;
 }
+
+/* --- FAMILY HERO SECTION --- */
 .family-hero {
   padding: 80px 0;
-  background: transparent; 
+  background: transparent;
 }
 
 .family-title {
   text-align: center;
-  font-size: 36px;
+  font-size: 38px;
   font-weight: 700;
   color: #0f172a;
-  margin-bottom: 50px;
-  transition: 0.3s ease;
+  margin-bottom: 60px;
+  transition: color 0.3s ease;
 }
+
 .family-title:hover {
-  color: #0538af;
-  transform: scale(1.1);
+  color: #2563eb;
 }
+
 .family-list {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 50px;
 }
 
 .family-item {
-  background: #ffffff; 
-  padding: 30px;
-  border-radius: 20px;
-  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.05);
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 24px;
+  box-shadow: 0 15px 35px rgba(15, 23, 42, 0.04);
+  border: 1px solid #e2e8f0;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 50px;
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
+  gap: 60px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
 .family-item:hover {
-  transform: scale(1.02);
-  box-shadow: 0 20px 35px rgba(37, 99, 235, 0.15);
+  transform: translateY(-5px); /* Blok biroz tepaga ko'tariladi */
+  box-shadow: 0 25px 45px rgba(37, 99, 235, 0.12);
 }
 
 .family-box {
-  flex: 1;
+  flex: 1.2;
 }
 
 .family-name {
-  font-size: 24px;
+  font-size: 26px;
   margin-bottom: 20px;
-  text-align: center;
   color: #2563eb;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-weight: 700;
+  position: relative;
+  display: inline-block;
 }
 
 .family-desc {
-  font-size: 16px;
-  margin-bottom: 20px;
-  text-align: center;
+  font-size: 17px;
   color: #475569;
-  line-height: 1.7;
+  line-height: 1.8;
+}
+
+/* Rasmlar va ularning qutilari effektlari */
+.family-img-wrapper {
+  flex: 0.8;
+  display: flex;
+  justify-content: center;
 }
 
 .family-img {
-  width: 340px;
-  height: 420px;
+  width: 320px;
+  height: 380px;
   object-fit: cover;
-  border-radius: 24px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  border-radius: 20px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s ease;
+}
+
+.family-item:hover .family-img {
+  transform: scale(1.04) rotate(1deg); /* Blok ustiga kelganda rasm biroz kattalashadi va buriladi */
+  box-shadow: 0 25px 40px rgba(0, 0, 0, 0.15);
 }
 
 /* --- FOOTER --- */
-footer {
+.site-footer {
   background-color: #ffffff;
   border-top: 1px solid #e2e8f0;
-  padding: 30px 0;
+  padding: 35px 0;
+  margin-top: 50px;
 }
 
 .footer-wrapper {
@@ -174,14 +197,43 @@ footer {
   justify-content: center;
   width: 45px;
   height: 45px;
-  transition: 0.3s;
+  background-color: #f1f5f9;
+  border-radius: 50%;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .social-box a:hover {
-  transform: scale(1.5);
+  transform: scale(1.2) translateY(-3px);
+  background-color: #e2e8f0;
 }
 
 .social-box img {
   width: 22px;
   height: 22px;
+}
+
+/* --- RESPONSIVE DESIGN (Mobil moslashuvchanlik) --- */
+@media (max-width: 968px) {
+  .header-wrapper {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .family-item {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px;
+    gap: 35px;
+  }
+
+  .family-img {
+    width: 100%;
+    max-width: 300px;
+    height: 350px;
+  }
+
+  /* Mobil ekranda ukangizning rasmi matndan pastda chiroyli joylashishi uchun */
+  .order-mobile {
+    order: 1; 
+  }
 }

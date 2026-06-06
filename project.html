@@ -1,30 +1,29 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Project</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="project.css" />
   </head>
   <body>
-  <header class="site-header">
+    <header class="site-header">
       <div class="container">
         <div class="header-wrapper">
-          <a class="logo-link" href="./index.html"> Mohinur </a>
+          <a class="logo-link" href="./index.html">Mohinur</a>
 
           <nav class="navbar">
             <ul class="navbar-list">
               <li class="navbar-item">
-                <a class="navbar-link" href="./index.html"> About me </a>
+                <a class="navbar-link" href="./index.html">About me</a>
               </li>
-
               <li class="navbar-item">
-                <a class="navbar-link" href="./family.html"> My family </a>
+                <a class="navbar-link" href="./family.html">My family</a>
               </li>
-
               <li class="navbar-item">
                 <a class="navbar-link active" href="./project.html">My projects</a>
-              </li>      
+              </li>
             </ul>
           </nav>
         </div>
@@ -34,34 +33,46 @@
     <main class="site-main">
       <section class="projects-hero">
         <div class="container">
-          <h2 class="project-title">My projects</h2>
+          <h2 class="project-title" data-aos="fade-down" data-aos-duration="800">My projects</h2>
 
           <ul class="project-list">
-            <li class="project-item">
-              <a href="https://ic-cream.netlify.app/">
-                <img class="project-img" src="./images/web-ice.png" alt="" />
-              </a>
+            <li class="project-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+              <div class="project-img-box">
+                <a href="https://ic-cream.netlify.app/" target="_blank">
+                  <img class="project-img" src="./images/web-ice.png" alt="Ice-Cream Website" />
+                  <div class="project-overlay"><span>View Project</span></div>
+                </a>
+              </div>
               <p class="project-desc">Ice-Cream</p>
             </li>
 
-            <li class="project-item">
-              <a href="https://typefoodwebsite.netlify.app/">
-                <img class="project-img" src="./images/food.png" alt="" />
-              </a>
+            <li class="project-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+              <div class="project-img-box">
+                <a href="https://typefoodwebsite.netlify.app/" target="_blank">
+                  <img class="project-img" src="./images/food.png" alt="Food Website" />
+                  <div class="project-overlay"><span>View Project</span></div>
+                </a>
+              </div>
               <p class="project-desc">Food</p>
             </li>
 
-            <li class="project-item">
-              <a href="https://typefurniture-website.netlify.app/">
-                <img class="project-img" src="images/furniture.png" alt="" />
-              </a>
+            <li class="project-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+              <div class="project-img-box">
+                <a href="https://typefurniture-website.netlify.app/" target="_blank">
+                  <img class="project-img" src="images/furniture.png" alt="Furniture Website" />
+                  <div class="project-overlay"><span>View Project</span></div>
+                </a>
+              </div>
               <p class="project-desc">Furniture</p>
             </li>
 
-            <li class="project-item">
-              <a href="https://hotelwebste.netlify.app/">
-                <img class="project-img" src="images/hotel.png" alt="" />
-              </a>
+            <li class="project-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+              <div class="project-img-box">
+                <a href="https://hotelwebste.netlify.app/" target="_blank">
+                  <img class="project-img" src="images/hotel.png" alt="Hotel Website" />
+                  <div class="project-overlay"><span>View Project</span></div>
+                </a>
+              </div>
               <p class="project-desc">Hotel</p>
             </li>
           </ul>
@@ -72,23 +83,22 @@
     <footer>
       <div class="container">
         <div class="footer-wrapper">
-          <a class="logo-link" href="./index.html"> Mohinur </a>
+          <a class="logo-link" href="./index.html">Mohinur</a>
 
           <div class="social-box">
-            <a href="#">
-              <img src="./images/insta.png" alt="" />
-            </a>
-
-            <a href="#">
-              <img src="./images/tg.png" alt="" />
-            </a>
-
-            <a href="#">
-              <img src="./images/tel.png" alt="" />
-            </a>
+            <a href="#"><img src="./images/insta.png" alt="Instagram" /></a>
+            <a href="https://t.me/mohinur619"><img src="./images/tg.png" alt="Telegram" /></a>
+            <a href="#"><img src="./images/tel.png" alt="Phone" /></a>
           </div>
         </div>
       </div>
     </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        once: true /* Animatsiya sahifa aylantirilganda bir marta silliq ishlaydi */
+      });
+    </script>
   </body>
 </html>

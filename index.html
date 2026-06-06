@@ -1,24 +1,25 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header class="site-header">
       <div class="container">
         <div class="header-wrapper">
-          <a class="logo-link" href="./index.html"> Mohinur</a>
+          <a class="logo-link" href="./index.html">Mohinur</a>
 
           <nav class="navbar">
             <ul class="navbar-list">
               <li class="navbar-item">
-                <a class="navbar-link active" href="./index.html"> About me </a>
+                <a class="navbar-link active" href="./index.html">About me</a>
               </li>
               <li class="navbar-item">
-                <a class="navbar-link" href="./family.html"> My family </a>
+                <a class="navbar-link" href="./family.html">My family</a>
               </li>
               <li class="navbar-item">
                 <a class="navbar-link" href="./project.html">My projects</a>
@@ -28,69 +29,68 @@
         </div>
       </div>
     </header>
+
     <main>
       <section class="aboutme">
         <div class="container">
           <div class="aboutme-wrapper">
-            <div class="aboutme-text-wrapper">
+            <div class="aboutme-text-wrapper" data-aos="fade-right" data-aos-duration="1000">
               <h1 class="aboutme-title">
                 Hi! <br />
                 My name is
                 <br />
-                <span class="aboutme-span"> Mohinur </span>
+                <span class="aboutme-span">Mohinur</span>
               </h1>
-
               <p class="aboutme-desc">
-                I have been studying at the Bektemir branch of PDP Junior for 3
-                months.
+                I have been studying at the Bektemir branch of PDP Junior for 3 months.
               </p>
-
               <a href="#more" class="btn">Read more</a>
             </div>
 
-            <div class="img-box">
-              <img class="aboutme-img" src="./images/me.jpg" alt="" />
+            <div class="img-box" data-aos="fade-left" data-aos-duration="1000">
+              <img class="aboutme-img" src="./images/me.jpg" alt="Mohinur" />
             </div>
           </div>
         </div>
       </section>
+
       <section class="more" id="more">
         <div class="container">
           <div class="more-wrapper">
-            <img class="more-img" src="./images/mee.png" alt="" />
+            <div class="img-box" data-aos="zoom-in" data-aos-duration="1000">
+              <img class="more-img" src="./images/mee.png" alt="More about me" />
+            </div>
 
-            <div class="more-texts-wrapper">
+            <div class="more-texts-wrapper" data-aos="fade-left" data-aos-duration="1000">
               <h2 class="more-title">
                 My full name is Uralova Mohinur, I am an 8th-grade student at
                 School №346. I also attend extra English classes to improve my
-                language skills.I enjoy reading different kinds of books,
-                especially those that help me learn new things
+                language skills. I enjoy reading different kinds of books,
+                especially those that help me learn new things.
               </h2>
-
               <a href="#data" class="btn">Down</a>
             </div>
           </div>
         </div>
       </section>
+
       <section class="data" id="data">
-        <center><h2 class="title">Contact me</h2></center>
+        <h2 class="title" data-aos="fade-up">Contact me</h2>
         <div class="container">
-          <div class="data-box">
+          <div class="data-box" data-aos="fade-up-right" data-aos-duration="1000">
             <form class="data-form" action="">
               <label for="name">Full name</label>
-              <input type="text" />
-              <label for="">Phone number</label>
-              <input type="tel" />
-              <label for="">Message</label>
-              <textarea name="" id="" rows="5"></textarea>
+              <input type="text" id="name" />
+              <label for="phone">Phone number</label>
+              <input type="tel" id="phone" />
+              <label for="msg">Message</label>
+              <textarea id="msg" rows="5"></textarea>
               <button class="data-btn">Send</button>
             </form>
           </div>
-          <div class="map">
+          <div class="map" data-aos="fade-up-left" data-aos-duration="1000">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d320.92900753193686!2d69.33522378059914!3d41.2270824944176!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1778840608033!5m2!1sen!2s"
-              width="600"
-              height="450"
               style="border: 0"
               allowfullscreen=""
               loading="lazy"
@@ -99,27 +99,26 @@
           </div>
         </div>
       </section>
+
       <footer>
         <div class="container">
           <div class="footer-wrapper">
-            <a class="logo-link" href="./index.html"> Mohinur </a>
-
+            <a class="logo-link" href="./index.html">Mohinur</a>
             <div class="social-box">
-              <a href="index.html">
-                <img src="./images/insta.png" alt="" />
-              </a>
-
-              <a href="https://t.me/mohinur619">
-                <img src="./images/tg.png" alt="" />
-              </a>
-
-              <a href="index.html">
-                <img src="./images/tel.png" alt="" />
-              </a>
+              <a href="index.html"><img src="./images/insta.png" alt="Instagram" /></a>
+              <a href="https://t.me/mohinur619"><img src="./images/tg.png" alt="Telegram" /></a>
+              <a href="index.html"><img src="./images/tel.png" alt="Phone" /></a>
             </div>
           </div>
         </div>
       </footer>
     </main>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        once: true // Animatsiya faqat bir marta, pastga tushganda ishlaydi
+      });
+    </script>
   </body>
 </html>

@@ -17,11 +17,15 @@ html {
   margin: 0 auto;
   padding: 0 25px;
 }
+
+/* --- SITE HEADER & NAVBAR --- */
 .site-header {
-  background-color: #ffffff; 
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px); /* Glassmorphism effekti */
   position: sticky;
   top: 0;
   z-index: 1000;
+  border-bottom: 1px solid rgba(226, 232, 240, 0.8);
 }
 
 .header-wrapper {
@@ -37,6 +41,11 @@ html {
   color: #2563eb;
   text-decoration: none;
   letter-spacing: -0.5px;
+  transition: transform 0.3s ease;
+}
+
+.logo-link:hover {
+  transform: scale(1.05);
 }
 
 .navbar-list {
@@ -45,24 +54,41 @@ html {
   gap: 30px;
 }
 
+/* To'g'rilangan navbar linklari dizayni */
 .navbar-link {
   text-decoration: none;
   color: #64748b;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 15px;
-  padding: 5px 0;
-  border-bottom: 2px solid transparent;
-  transition: color 0.3s ease, border-bottom 0.3s ease;
+  transition: color 0.3s ease;
+  position: relative;
+  padding: 8px 4px;
 }
 
 .navbar-link:hover,
 .navbar-link.active {
-  /* color: #2563eb; */
-   color: #FFf;
-  background-color: #0538af;
-  padding: 8px 10px;
-  border-radius: 10px;
+  color: #2563eb; /* Orqa fondagi ko'q rang olib tashlandi */
 }
+
+/* Link tagidagi chiziq animatsiyasi */
+.navbar-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  background-color: #2563eb;
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+.navbar-link:hover::after,
+.navbar-link.active::after {
+  width: 100%;
+}
+
+/* --- PROJECTS HERO SECTION --- */
 .projects-hero {
   padding: 80px 0;
   background: transparent;
@@ -70,60 +96,118 @@ html {
 
 .project-title {
   text-align: center;
-  font-size: 36px;
+  font-size: 38px;
   font-weight: 700;
   color: #0f172a;
-  margin-bottom: 50px;
-  transition: 0.3s ease;
+  margin-bottom: 60px;
+  transition: color 0.3s ease;
 }
-.project-title:hover{
- color: #0538af;
- transform: scale(1.1);
+
+.project-title:hover {
+  color: #2563eb;
 }
 
 .project-list {
-  list-style: none; 
+  list-style: none;
   display: flex;
-  flex-wrap: wrap;  
-  gap: 30px;  
+  flex-wrap: wrap;
+  gap: 30px;
   justify-content: center;
 }
 
+/* Loyihalar kartasi dizayni */
 .project-item {
-  background-color: #ffffff; /* Loyihalar oq kartochka ichida chiroyli kontrast beradi */
-  border-radius: 20px;
+  background-color: #ffffff;
+  border-radius: 24px;
   overflow: hidden;
-  width: calc(50% - 15px);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: calc(50% - 15px); /* Bir qatorda 2 tadan joylashadi */
+  box-shadow: 0 15px 35px rgba(15, 23, 42, 0.04);
+  border: 1px solid #e2e8f0;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
 .project-item:hover {
-  transform: scale(1.05);
-  box-shadow: 0 20px 40px rgba(37, 99, 235, 0.15);
+  transform: translateY(-8px); /* Kartochka biroz tepaga ko'tariladi */
+  box-shadow: 0 25px 50px rgba(37, 99, 235, 0.15);
+}
+
+/* Rasm uchun maxsus quti va Hover effekti */
+.project-img-box {
+  position: relative;
+  width: 100%;
+  height: 280px;
+  overflow: hidden;
 }
 
 .project-img {
-  width: 100%;     
-  height: 280px;    
-  object-fit: cover; 
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   display: block;
+  transition: transform 0.5s ease;
 }
 
-.project-desc {
-  padding: 20px;
-  font-size: 20px;
+.project-item:hover .project-img {
+  transform: scale(1.08); /* Rasm ichkarida bir oz kattalashadi */
+}
+
+/* Rasm ustidagi silliq parda effekti */
+.project-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(15, 23, 42, 0.4); /* To'q shaffof fon */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.project-overlay span {
+  color: #ffffff;
   font-weight: 600;
+  font-size: 16px;
+  padding: 10px 22px;
+  border: 2px solid #ffffff;
+  border-radius: 30px;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(4px);
+  transition: transform 0.3s ease;
+  transform: translateY(10px);
+}
+
+.project-item:hover .project-overlay {
+  opacity: 1;
+}
+
+.project-item:hover .project-overlay span {
+  transform: translateY(0);
+}
+
+/* Loyiha sarlavhasi */
+.project-desc {
+  padding: 22px;
+  font-size: 22px;
+  font-weight: 700;
   color: #0f172a;
   text-align: center;
-  border-top: 1px solid #e2e8f0; 
   background-color: #ffffff;
+  transition: color 0.3s ease;
+}
+
+.project-item:hover .project-desc {
+  color: #2563eb;
 }
 
 /* --- FOOTER --- */
 footer {
   background-color: #ffffff;
   border-top: 1px solid #e2e8f0;
-  padding: 30px 0;
+  padding: 35px 0;
+  margin-top: 60px;
 }
 
 .footer-wrapper {
@@ -143,14 +227,38 @@ footer {
   justify-content: center;
   width: 45px;
   height: 45px;
-  transition: transform 0.3s ease;
+  background-color: #f1f5f9;
+  border-radius: 50%;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .social-box a:hover {
-  transform: scale(1.2);
+  transform: scale(1.2) translateY(-3px);
+  background-color: #e2e8f0;
 }
 
 .social-box img {
   width: 22px;
   height: 22px;
+}
+
+/* --- RESPONSIVE DESIGN --- */
+@media (max-width: 768px) {
+  .header-wrapper {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .project-list {
+    gap: 20px;
+  }
+
+  .project-item {
+    width: 100%; /* Mobil telefonda loyihalar bittadan to'liq qatorda chiqadi */
+    max-width: 450px;
+  }
+
+  .project-img-box {
+    height: 220px;
+  }
 }
